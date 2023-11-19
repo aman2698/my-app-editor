@@ -24,28 +24,9 @@ export const EDITOR_TOOLS = {
   paragraph: Paragraph,
   checklist: {
     class: CheckList,
-    config:{
-        "type" : "checklist",
-        "data" : {
-            "items" : [
-                {
-                  "text" : "This is a block-styled editor",
-                  "checked" : true
-                },
-                {
-                  "text" : "Clean output data",
-                  "checked" : false
-                },
-                {
-                  "text" : "Simple and powerful API",
-                  "checked" : true
-                }
-            ]
-        }
-    }
   },
   embed: Embed,
-  image: Image,
+//   image: Image,
   inlineCode: InlineCode,
   link: Link,
   list: List,

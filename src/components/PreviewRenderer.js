@@ -21,7 +21,7 @@
 import edjsHTML from "editorjs-html";
 // this function parses strings (html elements) to html
 import parse from "html-react-parser";
-const edjsParser = edjsHTML({checklist: customParser});
+const edjsParser = edjsHTML({checklist: customParser, image:CustomImage});
 
 export default function PreviewRenderer({ data }) {
   // array of html elements
@@ -32,5 +32,10 @@ export default function PreviewRenderer({ data }) {
 }
 
 function customParser({data}){
+    return `<div> <input type='checkbox' value=${data.items[0].checked} /> ${data.items[0].text} </div>`;
+  }
+
+  function CustomImage({data}){
+    debugger
     return `<div> <input type='checkbox' value=${data.items[0].checked} /> ${data.items[0].text} </div>`;
   }
